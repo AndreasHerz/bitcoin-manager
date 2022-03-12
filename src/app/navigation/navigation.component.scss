@@ -6,7 +6,11 @@ button {
   color: white;
 }
 
-::ng-deep.mat-menu-content {
+::ng-deep.mat-menu-panel {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 8px !important;
   background-color: rgb(44, 44, 44) !important;
 }
 
