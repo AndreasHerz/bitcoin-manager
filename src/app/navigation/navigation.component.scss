@@ -1,0 +1,53 @@
+@import '../shared/styles/page-dimensions.scss';
+
+button {
+  border-radius: 0 !important;
+  background-color: rgb(44, 44, 44) !important;
+  color: white;
+}
+
+::ng-deep.mat-menu-content {
+  background-color: rgb(44, 44, 44) !important;
+}
+
+:host {
+  height: $menu-height;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  background-color: white;
+
+  position: relative;
+  z-index: 100;
+
+  box-shadow: 0px 0px 30px 5px black;
+
+  .logo-container {
+    width: 25%;
+
+    .logo {
+      height: 80%;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-image: url('../../assets/logos/bitcoin.svg');
+    }
+  }
+
+  .menu-item {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-icon-item {
+    height: 100%;
+    width: $menu-height;
+
+    border-radius: 0;
+  }
+}
