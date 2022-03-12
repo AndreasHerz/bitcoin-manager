@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  api: {
+    blockchain_ticker: 'https://blockchain.info/ticker'
+  }
 };
