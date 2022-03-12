@@ -15,7 +15,6 @@ overrides:
       parser: 'angular'
 importOrder:
   - '^@angular/(.*)$'
-  - '^@fill/(.*)$'
   - '<THIRD_PARTY_MODULES>'
   - '^[src/]'
   - '^[./]'
