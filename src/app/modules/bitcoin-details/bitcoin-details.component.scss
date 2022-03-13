@@ -10,7 +10,7 @@ $table-cell-width: 33%;
   justify-items: center;
 
   mat-card {
-    height: 40vh;
+    height: 50vh;
     width: 40vw;
     padding: 30px 50px 50px 50px;
 
@@ -22,7 +22,8 @@ $table-cell-width: 33%;
       height: 100%;
 
       display: grid;
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 25px;
     }
   }
 }
@@ -30,7 +31,7 @@ $table-cell-width: 33%;
 .key_value {
   align-self: center;
 
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 5px;
 

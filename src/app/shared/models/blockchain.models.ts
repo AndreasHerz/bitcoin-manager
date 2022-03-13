@@ -27,3 +27,17 @@ export interface BlockchainDetails {
   /** Current difficulty target as a decimal number */
   getdifficulty: number;
 }
+
+export interface DiagramMarketPrice {
+  status: string;
+  name: string;
+  unit: string;
+  period: string;
+  description: string;
+  values: DiagramData[];
+}
+
+export interface DiagramData {
+  x: number;
+  y: number;
+}

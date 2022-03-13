@@ -11,6 +11,10 @@ export const environment = {
       '24hrbtcsent': 'https://blockchain.info/q/24hrbtcsent',
       hashrate: 'https://blockchain.info/q/hashrate',
       getdifficulty: 'https://blockchain.info/q/getdifficulty'
+    },
+    diagram: {
+      marketPrice:
+        'https://api.blockchain.info/charts/market-price?timespan=1years&rollingAverage=1days&format=json&cors=true'
     }
   }
 };
