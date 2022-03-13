@@ -11,8 +11,9 @@ $table-cell-width: 33%;
 }
 
 mat-card {
-  height: 40vh;
+  height: 50vh;
   width: 40vw;
+  min-width: 360px;
   padding: 30px 50px 50px 50px;
 
   mat-card-header {

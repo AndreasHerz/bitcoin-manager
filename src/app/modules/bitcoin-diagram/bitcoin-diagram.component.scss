@@ -16,14 +16,13 @@
 
     mat-card-content {
       height: 100%;
+
+      highcharts-chart {
+        height: 100%;
+        width: 100%;
+
+        display: block;
+      }
     }
   }
-}
-
-.converter_result {
-  font-size: 2rem;
-}
-
-mat-form-field {
-  width: 100%;
 }
