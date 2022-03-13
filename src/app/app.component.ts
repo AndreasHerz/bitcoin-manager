@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bitcoin-manager';
+
+  constructor() {
+    this.toggleDarkTheme();
+  }
+
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
 }

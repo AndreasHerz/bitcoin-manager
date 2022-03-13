@@ -4,10 +4,10 @@
 button {
   border-radius: 0 !important;
   background-color: rgb(44, 44, 44) !important;
-  color: white;
+  color: white !important;
 
   &.active {
-    background-color: rgb(57, 57, 57) !important;
+    background-color: #424242 !important;
   }
 }
 
