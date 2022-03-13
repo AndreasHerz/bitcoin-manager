@@ -19,7 +19,7 @@ export class BlockchainApiService {
   constructor(private readonly http: HttpClient) {}
 
   public updateBlockchainInfo(): void {
-    this.http.get(environment.api.blockchain_ticker).subscribe(
+    this.http.get(environment.api.dashboard.blockchain_ticker).subscribe(
       (res: any) => {
         const newMap = new Map<CurrencyCode, BlockchainInfo>();
 

@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    <button mat-mini-fab matTooltip="Refresh values" (click)="refresh()"><mat-icon>refresh</mat-icon></button>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="sell key_value">
+      <span class="key"> {{ 'USD market cap' | uppercase }} </span>
+      <span class="value">
+        {{ details?.marketcup | number: '4.4':'de' }}
+      </span>
+    </div>
+    <div class="sell key_value">
+      <span class="key"> {{ 'Total Bitcoins in circulation' | uppercase }} </span>
+      <span class="value">
+        {{ details?.totalbc | number: '4.4':'de' }}
+      </span>
+    </div>
+    <div class="sell key_value">
+      <span class="key"> {{ 'Number of transactions in the past 24 hours' | uppercase }} </span>
+      <span class="value">
+        {{ details?.['24hrtransactioncount'] | number: '4.4':'de' }}
+      </span>
+    </div>
+    <div class="sell key_value">
+      <span class="key"> {{ 'Number of btc sent in the last 24 hours' | uppercase }} </span>
+      <span class="value">
+        {{ details?.['24hrbtcsent'] | number: '4.4':'de' }}
+      </span>
+    </div>
+    <div class="sell key_value">
+      <span class="key"> {{ 'Estimated network hash rate' | uppercase }} </span>
+      <span class="value">
+        {{ details?.hashrate | number: '4.4':'de' }}
+      </span>
+    </div>
+    <div class="sell key_value">
+      <span class="key"> {{ 'Current difficulty target as a decimal number' | uppercase }} </span>
+      <span class="value">
+        {{ details?.getdifficulty | number: '4.4':'de' }}
+      </span>
+    </div>
+  </mat-card-content>
+</mat-card>

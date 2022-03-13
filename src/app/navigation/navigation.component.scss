@@ -5,6 +5,10 @@ button {
   border-radius: 0 !important;
   background-color: rgb(44, 44, 44) !important;
   color: white;
+
+  &.active {
+    background-color: rgb(57, 57, 57) !important;
+  }
 }
 
 ::ng-deep.mat-menu-panel {
