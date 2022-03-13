@@ -1,0 +1,86 @@
+$action-button-size: 26px;
+$action-button-font-size: 16px;
+$table-inner-padding: 16px;
+$table-cell-width: 33%;
+
+:host {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+mat-card {
+  height: 40vh;
+  width: 40vw;
+  padding: 30px 50px 50px 50px;
+
+  mat-card-header {
+    justify-content: flex-end;
+  }
+
+  mat-card-content {
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 50%);
+    gap: 3rem;
+    grid-template-areas:
+      'last currency '
+      'buy currency '
+      'sell currency ';
+
+    .key_value {
+      align-self: center;
+
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .key {
+        font-size: x-small;
+      }
+      .value {
+        font-size: 2.5rem;
+      }
+    }
+
+    .last {
+      grid-area: last;
+    }
+    .buy {
+      grid-area: buy;
+    }
+    .sell {
+      grid-area: sell;
+    }
+    .currency {
+      grid-area: currency;
+
+      display: grid;
+      justify-items: center;
+      align-items: center;
+
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.mat-mini-fab {
+  width: $action-button-size;
+  height: $action-button-size;
+  line-height: $action-button-font-size;
+
+  ::ng-deep .mat-button-wrapper {
+    padding: 0;
+    line-height: $action-button-font-size;
+  }
+
+  mat-icon {
+    font-size: $action-button-font-size;
+    height: $action-button-font-size;
+    width: $action-button-font-size;
+  }
+}

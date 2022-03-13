@@ -11,13 +11,14 @@ import { BlockchainInfo } from './../../models/blockchain.models';
   providedIn: 'root'
 })
 export class BlockchainApiService {
-  private currentBlockchainInfo$ = new BehaviorSubject<Map<CurrencyCode, BlockchainInfo>>(
+  private _currentBlockchainInfo$ = new BehaviorSubject<Map<CurrencyCode, BlockchainInfo>>(
     new Map<CurrencyCode, BlockchainInfo>()
   );
+  public currentBlockchainInfo$ = this._currentBlockchainInfo$.asObservable();
 
   constructor(private readonly http: HttpClient) {}
 
-  public ticker(): void {
+  public updateBlockchainInfo(): void {
     this.http.get(environment.api.blockchain_ticker).subscribe(
       (res: any) => {
         const newMap = new Map<CurrencyCode, BlockchainInfo>();
@@ -26,7 +27,7 @@ export class BlockchainApiService {
           newMap.set(entry[0] as CurrencyCode, entry[1] as BlockchainInfo);
         });
 
-        this.currentBlockchainInfo$.next(newMap);
+        this._currentBlockchainInfo$.next(newMap);
       },
       (err: HttpErrorResponse) => console.error('An error occured.', err)
     );

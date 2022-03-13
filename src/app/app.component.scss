@@ -1,3 +1,10 @@
+@import './shared/styles/page-dimensions.scss';
+
 body {
   margin: 0;
+}
+
+.content-container {
+  height: calc(100% - $menu-height);
+  background: rgb(199, 199, 199);
 }
