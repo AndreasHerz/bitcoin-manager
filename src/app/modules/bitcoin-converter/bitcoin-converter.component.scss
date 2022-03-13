@@ -1,0 +1,35 @@
+:host {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+
+  mat-card {
+    height: 40vh;
+    width: 40vw;
+    min-width: 360px;
+    padding: 30px 50px 50px 50px;
+
+    mat-card-header {
+      justify-content: flex-end;
+    }
+
+    mat-card-content {
+      height: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      align-items: center;
+      justify-items: center;
+      gap: 15px;
+    }
+  }
+}
+
+.converter_result {
+  font-size: 2rem;
+}
+
+mat-form-field {
+  width: 100%;
+}
