@@ -31,8 +31,18 @@ button {
   .logo-container {
     width: 25%;
 
+    font-size: 1.5rem;
+
+    ::ng-deep .mat-button-wrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .logo {
-      height: 80%;
+      height: 60px;
+      width: 60px;
 
       background-repeat: no-repeat;
       background-size: contain;
