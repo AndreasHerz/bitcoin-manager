@@ -12,6 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./modules/bitcoin-details/bitcoin-details.module').then(m => m.BitcoinDetailsModule),
     pathMatch: 'full'
   },
+  {
+    path: 'converter',
+    loadChildren: () =>
+      import('./modules/bitcoin-converter/bitcoin-converter.module').then(m => m.BitcoinConverterModule),
+    pathMatch: 'full'
+  },
   { path: '**', redirectTo: 'dashboard' }
 ];
 

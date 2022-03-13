@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-content>
+    <div class="converter_forms">
+      <mat-form-field appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input matInput [(ngModel)]="value" type="number" />
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = undefined">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Currency</mat-label>
+        <mat-select [(value)]="selectedCurrency">
+          <mat-option *ngFor="let option of availableCurrencies" [value]="option">{{ option }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="converter_result">
+      {{ (convertToBitcoin() | currency: '₿':'symbol':'.0-6':'de') ?? ('Please pass a value' | uppercase) }}
+    </div>
+  </mat-card-content>
+</mat-card>
