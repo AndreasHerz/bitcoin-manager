@@ -26,6 +26,7 @@ mat-card {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 50%);
+    justify-items: center;
     gap: 3rem;
     grid-template-areas:
       'last currency '
