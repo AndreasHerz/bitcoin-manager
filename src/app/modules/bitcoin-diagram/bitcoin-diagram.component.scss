@@ -1,0 +1,28 @@
+:host {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+
+  mat-card {
+    height: 60vh;
+    width: 60vw;
+    min-width: 360px;
+    padding: 30px 50px 50px 50px;
+
+    mat-card-header {
+      justify-content: flex-end;
+    }
+
+    mat-card-content {
+      height: 100%;
+
+      highcharts-chart {
+        height: 100%;
+        width: 100%;
+
+        display: block;
+      }
+    }
+  }
+}

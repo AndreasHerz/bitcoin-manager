@@ -18,6 +18,11 @@ const routes: Routes = [
       import('./modules/bitcoin-converter/bitcoin-converter.module').then(m => m.BitcoinConverterModule),
     pathMatch: 'full'
   },
+  {
+    path: 'diagram',
+    loadChildren: () => import('./modules/bitcoin-diagram/bitcoin-diagram.module').then(m => m.BitcoinDiagramModule),
+    pathMatch: 'full'
+  },
   { path: '**', redirectTo: 'dashboard' }
 ];
 

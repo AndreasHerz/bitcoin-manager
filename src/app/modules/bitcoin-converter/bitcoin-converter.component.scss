@@ -5,14 +5,10 @@
   justify-items: center;
 
   mat-card {
-    height: 40vh;
+    height: 50vh;
     width: 40vw;
     min-width: 360px;
     padding: 30px 50px 50px 50px;
-
-    mat-card-header {
-      justify-content: flex-end;
-    }
 
     mat-card-content {
       height: 100%;
