@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import * as Highcharts from 'highcharts';
 
+import { DiagramMarketPrice } from 'src/app/shared/models/blockchain.models';
+
 import { BcDiagramApiService } from './../../shared/services/api/bc-diagram-api.service';
 
 @Component({
@@ -10,8 +12,8 @@ import { BcDiagramApiService } from './../../shared/services/api/bc-diagram-api.
   styleUrls: ['./bitcoin-diagram.component.scss']
 })
 export class BitcoinDiagramComponent implements OnInit {
-  Highcharts: typeof Highcharts = Highcharts;
-  chartOptions: Highcharts.Options = {
+  public Highcharts: typeof Highcharts = Highcharts;
+  public chartOptions: Highcharts.Options = {
     colors: [
       '#2b908f',
       '#90ee7e',
@@ -33,7 +35,7 @@ export class BitcoinDiagramComponent implements OnInit {
       }
     },
     title: {
-      text: 'Bitcoin market value over a year',
+      text: 'Bitcoin market value over one year',
       style: {
         color: '#E0E0E3',
         textTransform: 'uppercase',
@@ -110,7 +112,7 @@ export class BitcoinDiagramComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.bcDiagramApi.currentMarketPrice$.subscribe(data => {
+    this.bcDiagramApi.currentMarketPrice$.subscribe((data: DiagramMarketPrice | undefined) => {
       this.chartOptions = {
         ...this.chartOptions,
         series: [
